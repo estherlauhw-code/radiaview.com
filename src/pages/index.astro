@@ -1,11 +1,131 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// RadiaView 官方網站 - B2B LED 永續解決方案首頁
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RadiaView Display Technology | Sustainable B2B LED Solutions</title>
+    <script src="https://tailwindcss.com"></script>
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 35px -10px rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300 antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+    <!-- 1. Navigation Bar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <i class="fa-solid fa-leaf text-emerald-400 text-2xl mr-2"></i>
+                    <span class="text-white font-extrabold text-2xl tracking-tighter">Radia<span class="text-emerald-400">View</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#products" class="text-sm font-semibold hover:text-emerald-400 transition-colors">Products</a>
+                    <a href="#sustainability" class="text-sm font-semibold hover:text-emerald-400 transition-colors">Sustainability</a>
+                    <a href="#solutions" class="text-sm font-semibold hover:text-emerald-400 transition-colors">Solutions</a>
+                    <a href="#contact" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm px-6 py-2.5 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all">
+                        Request ESG Report / Proposal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-widest uppercase">
+                Next-Generation Micro-MiP
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                Redefining Displays with <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Sustainable Brilliance.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Experience 35% energy savings, smart microgrid integration, and zero-carbon footprints. Our technology delivers uncompromising visual purity for B2B integrators, featuring a substrate-less and completely solderless architecture.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-8 py-4 rounded-lg flex items-center justify-center transition-all">
+                    Explore Micro-MiP <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#contact" class="border border-cyan-500/50 hover:bg-cyan-500/10 text-cyan-400 font-bold px-8 py-4 rounded-lg flex items-center justify-center transition-all">
+                    <i class="fa-solid fa-bolt mr-2"></i> Smart Grid Integration
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Bento Grid Feature Section -->
+    <section id="products" class="py-24 bg-slate-950/50 border-t border-slate-900 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">A Purpose-Built Portfolio</h2>
+                <p class="text-slate-400">Engineered for high-efficiency continuous operation.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1: Indoor -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-2xl p-8 overflow-hidden transition-all duration-500 hover:border-emerald-500/50 glow-effect flex flex-col justify-between h-full">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-microchip text-8xl text-emerald-400"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-emerald-500/30">
+                            <i class="fa-solid fa-border-all text-emerald-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Indoor Micro MiP Series</h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Ultra-fine pitch with 100% color uniformity and 30% lower maintenance e-waste. It achieves a definitive 100,000:1 contrast ratio and features a >99% black surface area for absolute darkness.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Compact RGB arrangement eliminates pixel boundary bleeding</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> 360° dead-angle-free optical output</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Sub-20µm precision unit splicing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Outdoor -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-2xl p-8 overflow-hidden transition-all duration-500 hover:border-cyan-500/50 hover:shadow-[0_0_35px_-10px_rgba(6,182,212,0.4)] flex flex-col justify-between h-full">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-sun text-8xl text-cyan-400"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6 border border-cyan-500/30">
+                            <i class="fa-solid fa-sun text-cyan-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Outdoor Mini MiP Series</h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Engineered for stadium scale with a common-cathode 35% power reduction and smart microgrid autonomous operation. Designed for 24/7 mission-critical uptime.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-3"></i> IP65 weather-proof extreme environment endurance</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-3"></i> Intelligent auto-dimming smart grid interface</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-3"></i> High-brightness contrast under direct sunlight</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
